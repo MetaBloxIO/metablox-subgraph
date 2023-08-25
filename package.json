@@ -1,0 +1,35 @@
+{
+  "name": "metablox-subgraph",
+  "description": "MetaBlox Subgraph",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "git@github.com:MetaBloxIO/metablox-subgraph.git",
+  "author": "MetaBloxIO",
+  "license": "GPL-3.0-or-later",
+  "workspaces": [
+    "subgraphs/**/*"
+  ],
+  "scripts": {
+    "codegen": "turbo run codegen",
+    "build": "turbo run build",
+    "format:check": "prettier --check '*/**/*.{js,ts}'",
+    "format:write": "prettier --write '*/**/*.{js,ts}'",
+    "lint": "eslint '*/**/*.{js,ts}'",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@graphprotocol/graph-cli": "^0.56.0",
+    "@graphprotocol/graph-ts": "^0.31.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "mustache": "^4.2.0",
+    "prettier": "^3.0.2",
+    "turbo": "^1.7.4",
+    "typescript": "^5.2.2"
+  }
+}
